@@ -1,0 +1,7 @@
+gcc
+lazygit
+cspell*
+NerdFont
+ripgrep
+fzf
+
