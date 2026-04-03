@@ -4,7 +4,7 @@ cp ./archive/nvim-linux-x86_64.appimage ~/.local/bin/nvim
 chmod u+x ~/.local/bin/nvim
 
 # Install lazygit
-tar xf archive/lazygit.tar.gz lazygit
+tar xf archive/lazygit_0.60.0_linux_x86_64.tar.gz lazygit
 mv lazygit ~/.local/bin/
 
 # Install ripgrep
