@@ -1,6 +1,6 @@
 # Install nvim
 mkdir -p ~/.local/bin
-cp ./archive/nvim-linux-x86_64.appimage ~/.local/bin/nvim
+curl -sLo ~/.local/bin/nvim https://github.com/neovim/neovim-releases/releases/latest/download/nvim-linux-x86_64.appimage
 chmod u+x ~/.local/bin/nvim
 
 # Install lazygit
