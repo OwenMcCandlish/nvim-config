@@ -41,7 +41,7 @@ return {
 {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-        ensure_installed = {"lua_ls", "clangd", "ruff"},
+        ensure_installed = {"lua_ls", "clangd", "ruff", "basedpyright"},
         -- automatic_enable = true,
     },
     dependencies = {
@@ -123,12 +123,25 @@ return {
           capabilities = {
               general = {
                   positionalEncodings = {"utf-8"}
-              }
+              },
+              offsetEncoding = {"utf-8"},
           }
         })
 
         vim.lsp.config('clangd', {
             filetypes = {"c", "cpp", "objc", "objcpp", "cuda", "cu"},
+        })
+
+        vim.lsp.config('basedpyright', {
+          settings = {
+            basedpyright = {
+              analysis = {
+                diagnosticSeverityOverrides = {
+                  reportUnusedCallResult = "none"
+                }
+              }
+            }
+          }
         })
 
         -- enable inlay hint
